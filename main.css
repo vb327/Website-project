@@ -1,0 +1,75 @@
+html {
+    background-color: lightskyblue;
+}
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 100%;
+    background-color: lightcyan;
+    width: 120%;
+    max-width: 1024px;
+    margin: 0 auto;
+    border: 3px solid dodgerblue;
+    position: relative;
+   
+}
+section {
+    text-align: left;
+}
+
+
+nav ul li:hover>ul {
+    display: block;
+}
+nav>ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+header h1 {
+    float: left;
+}
+h1 {
+    align-content: center;
+}
+
+
+
+
+/* mobile landscape to tablet portrait */
+@media only screen and (max-width: 767px) {
+	header img { float: none; }
+	header { text-align: center; }
+	section {
+		float: none;
+		width: 95%;                     /* 100 - (2 x 2.5) for padding */
+	}
+	aside {
+		float: none;
+		padding-right: 2.5%;           /* 20 / 800 x 100 */
+		width: 95%;                    /* 100 - (2 x 2.5) for padding */
+	}
+	article img { max-width: 30%; }
+	#speakers {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+	nav {
+		display: none;
+	}
+	#mobile_menu {
+		display: block;
+	}
+	.slicknav_menu {
+		background-color: #800000 !important;
+	}
+}
+
+/* mobile portrait to mobile landscape */
+@media only screen and (max-width: 479px) {
+	body { font-size: 90%; }
+}
+
+
